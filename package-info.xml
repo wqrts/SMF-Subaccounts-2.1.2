@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE package-info SYSTEM "http://www.simplemachines.org/xml/package-info">
+<package-info xmlns="http://www.simplemachines.org/xml/package-info" xmlns:smf="http://www.simplemachines.org/">
+	<id>wqrts:subaccounts</id>
+	<version>2.1.2</version>
+	<name>SubAccounts Mod</name>
+	<type>modification</type>
+
+	<install for="2.1 Beta 2">
+		<readme parsebbc="true">readme.txt</readme>
+		<database>add_settings.php</database>
+		<modification type="file">install.xml</modification>
+		<require-file name="SubAccount.php" destination="$sourcedir" />
+		<require-file name="SubAccount.template.php" destination="$themedir" />
+		<require-file name="feature_subaccount.png" destination="$themedir/images/admin" />
+		<require-file name="subaccount_delete.gif" destination="$themedir/images" />
+		<require-file name="subaccount_merge.gif" destination="$themedir/images" />
+		<require-file name="subaccount_parent.gif" destination="$themedir/images" />
+		<require-file name="subaccount_split.gif" destination="$themedir/images" />
+		<require-file name="subaccount_share.gif" destination="$themedir/images" />
+		<require-file name="subaccount_unshare.gif" destination="$themedir/images" />
+		<redirect url="?action=admin;area=corefeatures">redirect.txt</redirect>
+	</install>
+
+	<uninstall for="2.1 Beta 2">
+		<modification type="file" reverse="true">install.xml</modification>
+		<remove-file name="$sourcedir/SubAccount.php" />
+		<remove-file name="$themedir/SubAccount.template.php" />
+		<remove-file name="$themedir/images/admin/feature_subaccount.png" />
+		<remove-file name="$themedir/images/subaccount_delete.gif" />
+		<remove-file name="$themedir/images/subaccount_merge.gif" />
+		<remove-file name="$themedir/images/subaccount_parent.gif" />
+		<remove-file name="$themedir/images/subaccount_split.gif" />
+		<remove-file name="$themedir/images/subaccount_share.gif" />
+		<remove-file name="$themedir/images/subaccount_unshare.gif" />
+	</uninstall>
+
+	</upgrade>
+</package-info>
